@@ -26,10 +26,17 @@ android {
 }
 
 dependencies {
+    //SUPPORT//
+    compile supportDependencies.appCompat
+    compile supportDependencies.design
+    compile supportDependencies.supportAnnotation
+
+    //RX//
+    compile reactiveDependencies.reactiveAndroid
+    compile reactiveDependencies.reactiveJava
+
+    //DAGGER//
     compile daggerDependencies.dagger
     annotationProcessor daggerDependencies.daggerCompiler
     provided daggerDependencies.daggerAnnotations
-
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
