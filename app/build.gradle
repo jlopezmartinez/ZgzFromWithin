@@ -39,4 +39,8 @@ dependencies {
     compile daggerDependencies.dagger
     annotationProcessor daggerDependencies.daggerCompiler
     provided daggerDependencies.daggerAnnotations
+
+    //BUTTERKNIFE//
+    compile butterKnife
+    compile butterKnifeCompiler
 }
