@@ -3,6 +3,7 @@ package es.jesuslopez.zgzfromwithin.domain.usecase;
 import io.reactivex.Observable;
 import io.reactivex.Scheduler;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.observers.DisposableObserver;
 
 /**
  * Created by JesusLopez on 2/7/17.
@@ -19,5 +20,14 @@ abstract class UseCase<T> {
         this.uiSchedule = uiSchedule;
     }
 
-    protected abstract Observable<T> getObservableUseCase();
+    public void executeObserver(DisposableObserver<T> observer) {
+        if (observer != null) {
+            final Observable<T> observable = createObservableUseCase().subscribeOn(executorSchedule).observeOn(uiSchedule);
+
+            DisposableObserver disposableObserver = observable.subscribeWith(observer);
+            compositeDisposable.add(disposableObserver);
+        }
+    }
+
+    protected abstract Observable<T> createObservableUseCase();
 }

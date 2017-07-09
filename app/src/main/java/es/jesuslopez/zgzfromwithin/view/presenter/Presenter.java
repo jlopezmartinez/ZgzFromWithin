@@ -4,7 +4,7 @@ package es.jesuslopez.zgzfromwithin.view.presenter;
  * Created by JesusLopez on 6/7/17.
  */
 
-public class Presenter<T extends Presenter.View> {
+public class Presenter<T> {
 
     private T view;
 
@@ -16,7 +16,7 @@ public class Presenter<T extends Presenter.View> {
         this.view = view;
     }
 
-    public interface View {
 
+    public void init() {
     }
 }
