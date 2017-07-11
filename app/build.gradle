@@ -43,4 +43,7 @@ dependencies {
     //BUTTERKNIFE//
     compile butterKnife
     compile butterKnifeCompiler
+
+    //GSON//
+    compile gson
 }
