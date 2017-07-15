@@ -35,7 +35,7 @@ public class ListPlacesActivity extends BaseActivity implements ListPlacesPresen
         setPresenter();
         setAdapter();
         setView();
-        initialicePresenter();
+        initializePresenter();
     }
 
     @Override
@@ -52,7 +52,7 @@ public class ListPlacesActivity extends BaseActivity implements ListPlacesPresen
         listPlacesPresenter.setView(this);
     }
 
-    private void initialicePresenter() {
+    private void initializePresenter() {
         listPlacesPresenter.init();
     }
 
