@@ -4,6 +4,7 @@ import android.content.Context;
 
 import javax.inject.Inject;
 
+import es.jesuslopez.zgzfromwithin.data.local.LocalImpl;
 import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.JSONMapperPlaceEntity;
 
 /**
@@ -21,6 +22,7 @@ public class PlaceDataSourceFactory {
 
     public PlaceLocalApiDataSource getDataSource() {
         JSONMapperPlaceEntity jsonMapperPlaceEntity = new JSONMapperPlaceEntity();
-        return null;
+        LocalImpl local = new LocalImpl(context, jsonMapperPlaceEntity);
+        return new PlaceLocalApiDataSource(local);
     }
 }

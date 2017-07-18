@@ -5,6 +5,7 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -23,16 +24,14 @@ public class JSONMapperPlaceEntity {
         gson = new Gson();
     }
 
-    public PlaceEntity getPlaceEntityFromJSON(String response) throws JsonSyntaxException {
+    public List<PlaceEntity> getListPlacesEntityFromJSON(String response) throws JsonSyntaxException {
         try {
-            Type type = new TypeToken<PlaceEntity>() {
+            Type type = new TypeToken<List<PlaceEntity>>() {
             }.getType();
-
-            PlaceEntity placeEntity = gson.fromJson(response, type);
-            return placeEntity;
-        } catch (JsonSyntaxException exception) {
-            exception.printStackTrace();
-            throw exception;
+            return gson.fromJson(response, type);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
         }
     }
 }
