@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Basílica del Pilar",
+    "phone": "976 397 497",
+    "address": "Plaza del Pilar",
+    "image": "http://www.caballerosdelpilar.com/wp-content/uploads/2014/01/basilica.jpg",
+    "video": "https://www.youtube.com/watch?v=8aXi8_x1Y50",
+    "time": "Lunes a viernes de 10 a 14 y de 16 a 20h Sábados:10 a 14h",
+    "desc": "La Basílica del Pilar es uno de los santuarios marianos más importante del mundo católico, al que llegan anualmente miles de peregrinos. Es también un centro artístico de primer orden que reúne obras de gran valor y de diferentes épocas, especialmente los frescos pintados por Goya.\nLa construcción de la actual Basílica del Pilar está íntimamente ligada al aumento de la devoción mariana a lo largo del siglo XVII. El anterior edificio gótico-mudéjar se queda pequeño ante el creciente número de fieles y se hace necesario levantar un nuevo templo grandioso y monumental, más acorde con el nuevo espíritu triunfante de la Iglesia de la Contrarreforma y con la recién adquirida categoría de concatedral.\nLa fisonomía actual del Pilar es el resultado de un largo proceso constructivo que se inicia con el proyecto del zaragozano Felipe Sánchez, revisado posteriormente por Herrera el Mozo, arquitecto de Carlos II. La intervención del arquitecto real Ventura Rodríguez a partir de 1750 fue decisiva: renueva la decoración interior según las nuevas corrientes clasicistas de la época y diseña la Santa Capilla y el Coreto, y remodela el trazado exterior con cúpulas añadidas a la central -que en un principio se había pensado que iba a ser la única- y torres que no se terminarán hasta mediados de nuestro siglo."
+  },
+  {
+    "name": "Palacio de la Aljafería",
+    "phone": "976 28 96 83",
+    "address": "Calle de los Diputados, s/n",
+    "image": "https://www.zaragoza.es/cont/paginas/turismo/img/monumentos/Aljaferiap.jpg",
+    "video": "https://www.youtube.com/watch?v=c2oj064eLYI",
+    "time": "10:00–14:00\n16:30–20:00",
+    "desc": "El palacio, sede actual de las Cortes de Aragón, es un edificio de singular belleza. Su dilatada existencia a lo largo de la historia nos permite observar la delicada belleza ornamental de un palacio taifal del siglo XI, las extraordinarias tallas en madera en forma de alfarjes de los artistas mudéjares que trabajaron en el palacio cristiano medieval y la magnificencia de la época de los Reyes Católicos, con su salón de trono, en el que asombra la espectacular techumbre de madera dorada y policromada.\nLa Aljafería ha vivido diversos avatares, cambios y etapas. Concluidos los trabajos de restauración del monumento, en la actualidad es un edificio vivo y abierto, un referente cultural en nuestra ciudad."
+  }
+]
