@@ -34,6 +34,12 @@ public class LocalImpl implements LocalApi {
             @Override
             public void subscribe(ObservableEmitter<List<PlaceEntity>> e) throws Exception {
                 List<PlaceEntity> listPlaces = getAllPlaces();
+                if (listPlaces != null) {
+                    e.onNext(listPlaces);
+                    e.onComplete();
+                } else {
+                    e.onError(new Throwable("Error getting data"));
+                }
             }
         });
     }

@@ -10,10 +10,8 @@ import es.jesuslopez.zgzfromwithin.view.activity.ListPlacesActivity;
  * Created by JesusLopez on 4/7/17.
  */
 
-
 @Singleton
 @Component(modules = MainModule.class)
 public interface SystemComponent {
-
     void inject(ListPlacesActivity listPlacesActivity);
 }

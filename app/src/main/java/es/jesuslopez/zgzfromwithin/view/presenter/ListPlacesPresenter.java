@@ -3,6 +3,8 @@ package es.jesuslopez.zgzfromwithin.view.presenter;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import es.jesuslopez.zgzfromwithin.domain.model.Place;
 import es.jesuslopez.zgzfromwithin.domain.usecase.GetPlaces;
 import es.jesuslopez.zgzfromwithin.domain.usecase.UseCaseObserver;
@@ -18,7 +20,7 @@ public class ListPlacesPresenter extends Presenter<ListPlacesPresenter.View> {
     private MapperPlacesViewModelToPlace mapper;
     private GetPlaces getPlaces;
 
-    public ListPlacesPresenter(GetPlaces getPlaces, MapperPlacesViewModelToPlace mapperPlacesViewModelToPlace) {
+    @Inject public ListPlacesPresenter(GetPlaces getPlaces, MapperPlacesViewModelToPlace mapperPlacesViewModelToPlace) {
         this.getPlaces = getPlaces;
         this.mapper = mapperPlacesViewModelToPlace;
     }

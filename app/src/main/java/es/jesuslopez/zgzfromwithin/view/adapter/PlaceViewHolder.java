@@ -20,7 +20,7 @@ public class PlaceViewHolder extends RecyclerView.ViewHolder {
 
     public PlaceViewHolder(View itemView) {
         super(itemView);
-        ButterKnife.bind(itemView);
+        ButterKnife.bind(this, itemView);
     }
 
     public void setView(PlaceViewModel placeViewModel) {

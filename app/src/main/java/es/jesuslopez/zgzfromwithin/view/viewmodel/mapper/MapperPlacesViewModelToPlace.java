@@ -1,5 +1,7 @@
 package es.jesuslopez.zgzfromwithin.view.viewmodel.mapper;
 
+import javax.inject.Inject;
+
 import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.Mapper;
 import es.jesuslopez.zgzfromwithin.domain.model.Place;
 import es.jesuslopez.zgzfromwithin.view.viewmodel.PlaceViewModel;
@@ -9,6 +11,10 @@ import es.jesuslopez.zgzfromwithin.view.viewmodel.PlaceViewModel;
  */
 
 public class MapperPlacesViewModelToPlace extends Mapper<Place, PlaceViewModel> {
+
+    @Inject
+    public MapperPlacesViewModelToPlace() {
+    }
 
     @Override
     public PlaceViewModel map(Place place) {
