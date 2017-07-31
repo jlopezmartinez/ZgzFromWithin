@@ -34,6 +34,7 @@ dependencies {
     //SUPPORT//
     compile supportDependencies.appCompat
     compile supportDependencies.design
+    compile supportDependencies.cardView
     compile supportDependencies.supportAnnotation
 
     //RX//
@@ -51,4 +52,7 @@ dependencies {
 
     //GSON//
     compile gson
+
+    //PICASSO//
+    compile picasso
 }
