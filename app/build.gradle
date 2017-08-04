@@ -55,4 +55,7 @@ dependencies {
 
     //PICASSO//
     compile picasso
+
+    //SHINEBUTTON/
+    compile shineButton
 }
