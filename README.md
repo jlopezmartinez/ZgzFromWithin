@@ -3,7 +3,7 @@
 # ZgzFromWithin
 Android application through which you can consult the most beautiful places in one of the most beautiful cities in the world: Zaragoza (Spain)
 
-![](./images/image_md.png)
+![](./images/image_md_small.png)
 
 Libraries used in the project
 ------------------------------------
