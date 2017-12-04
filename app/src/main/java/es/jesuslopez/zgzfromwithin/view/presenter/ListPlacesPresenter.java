@@ -20,29 +20,32 @@ public class ListPlacesPresenter extends Presenter<ListPlacesPresenter.View> {
     private MapperPlacesViewModelToPlace mapper;
     private GetPlaces getPlaces;
 
-    @Inject public ListPlacesPresenter(GetPlaces getPlaces, MapperPlacesViewModelToPlace mapperPlacesViewModelToPlace) {
+    @Inject
+    public ListPlacesPresenter(GetPlaces getPlaces, MapperPlacesViewModelToPlace mapperPlacesViewModelToPlace) {
         this.getPlaces = getPlaces;
         this.mapper = mapperPlacesViewModelToPlace;
     }
 
-    public interface View {
+    public interface View extends Presenter.View {
         void showListPlaces(List<PlaceViewModel> placesList);
     }
 
+    @Override
     public void init() {
         super.init();
+        getView().showProgressBar();
         getPlaces.executeObserver(new LisPlacesObserver());
     }
 
     private final class LisPlacesObserver extends UseCaseObserver<List<Place>> {
         @Override
         public void onComplete() {
-            super.onComplete();
+            getView().hideProgressBar();
         }
 
         @Override
         public void onError(Throwable e) {
-            super.onError(e);
+            getView().hideProgressBar();
         }
 
         @Override

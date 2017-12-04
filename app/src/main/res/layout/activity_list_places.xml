@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="es.jesuslopez.zgzfromwithin.view.activity.ListPlacesActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".view.activity.ListPlacesActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerViewPlaces"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-</RelativeLayout>
+        android:layout_height="@dimen/app_bar_height"
+        android:background="@drawable/bg_home"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:fitsSystemWindows="true"
+                android:padding="@dimen/space_medium"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_action_bar"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.23" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/list_places" />
+
+<!--    <ProgressBar
+        android:id="@+id/item_progress_bar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="5dp"
+        android:padding="5dp"
+        android:visibility="gone" />-->
+</android.support.design.widget.CoordinatorLayout>

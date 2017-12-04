@@ -4,8 +4,7 @@ import android.content.Context;
 
 import javax.inject.Inject;
 
-import es.jesuslopez.zgzfromwithin.data.local.LocalImpl;
-import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.JSONMapperPlaceEntity;
+import es.jesuslopez.zgzfromwithin.data.net.NetImpl;
 
 /**
  * Created by JesusLopez on 15/7/17.
@@ -20,9 +19,8 @@ public class PlaceDataSourceFactory {
         this.context = ctx;
     }
 
-    public PlaceLocalApiDataSource getDataSource() {
-        JSONMapperPlaceEntity jsonMapperPlaceEntity = new JSONMapperPlaceEntity();
-        LocalImpl local = new LocalImpl(context, jsonMapperPlaceEntity);
-        return new PlaceLocalApiDataSource(local);
+    public PlaceNetApiDataSource getDataSource() {
+        NetImpl netImpl = new NetImpl();
+        return new PlaceNetApiDataSource(netImpl);
     }
 }

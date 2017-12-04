@@ -77,7 +77,7 @@ public class SplashScreenActivity extends BaseActivity {
 
     private void initMainActivity() {
         Intent intent = new Intent(SplashScreenActivity.this,
-                ListPlacesActivity.class);
+                MenuActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         finish();

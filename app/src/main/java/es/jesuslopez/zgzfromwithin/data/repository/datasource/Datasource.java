@@ -1,8 +1,6 @@
-package es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper;
+package es.jesuslopez.zgzfromwithin.data.repository.datasource;
 
-import java.util.List;
-
-import es.jesuslopez.zgzfromwithin.data.entity.PlaceEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseEntity;
 import io.reactivex.Observable;
 
 /**
@@ -10,5 +8,5 @@ import io.reactivex.Observable;
  */
 
 public interface Datasource {
-    Observable<List<PlaceEntity>> listPlaceEntity();
+    Observable<ResponseEntity> listPlaceEntity();
 }

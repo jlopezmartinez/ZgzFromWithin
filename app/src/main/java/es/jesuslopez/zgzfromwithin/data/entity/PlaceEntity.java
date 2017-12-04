@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class PlaceEntity {
     
-    @SerializedName("name")
+    @SerializedName("title")
     private String placeName;
     @SerializedName("phone")
     private String placePhone;
@@ -20,7 +20,7 @@ public class PlaceEntity {
     private String placeVideo;
     @SerializedName("time")
     private String placeHorary;
-    @SerializedName("desc")
+    @SerializedName("description")
     private String placeDescription;
 
     public String getPlaceName() {

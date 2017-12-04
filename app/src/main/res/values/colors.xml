@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="redLight">#ffb2b2</color>
+    <color name="greyLight">#d8d8d8</color>
+    <color name="colorMonuments">#E6dca02e</color>
+    <color name="colorRestaurants">#E6119e95</color>
+    <color name="colorAccomodation">#E6e6625d</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
 </resources>

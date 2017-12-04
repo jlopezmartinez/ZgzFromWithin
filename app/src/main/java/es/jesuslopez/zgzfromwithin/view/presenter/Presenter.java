@@ -19,4 +19,11 @@ public class Presenter<T> {
 
     public void init() {
     }
+
+    public interface View {
+
+        void showProgressBar();
+
+        void hideProgressBar();
+    }
 }

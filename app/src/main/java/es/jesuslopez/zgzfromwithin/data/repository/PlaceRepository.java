@@ -4,9 +4,9 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import es.jesuslopez.zgzfromwithin.data.entity.PlaceEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseEntity;
+import es.jesuslopez.zgzfromwithin.data.repository.datasource.Datasource;
 import es.jesuslopez.zgzfromwithin.data.repository.datasource.PlaceDataSourceFactory;
-import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.Datasource;
 import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.MapperPlaceToPlaceEntity;
 import es.jesuslopez.zgzfromwithin.domain.model.Place;
 import io.reactivex.Observable;
@@ -29,10 +29,11 @@ public class PlaceRepository implements Repository {
 
     @Override
     public Observable<List<Place>> placeList() {
-        return datasource.listPlaceEntity().map(new Function<List<PlaceEntity>, List<Place>>() {
+        return datasource.listPlaceEntity().map(new Function<ResponseEntity, List<Place>>() {
+
             @Override
-            public List<Place> apply(List<PlaceEntity> placeEntities) throws Exception {
-                return mapperPlaceToPlaceEntity.map(placeEntities);
+            public List<Place> apply(ResponseEntity responseEntity) throws Exception {
+                return mapperPlaceToPlaceEntity.map(responseEntity.getResult());
             }
         });
     }

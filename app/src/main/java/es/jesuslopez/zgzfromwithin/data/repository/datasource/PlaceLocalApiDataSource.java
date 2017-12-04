@@ -1,10 +1,6 @@
 package es.jesuslopez.zgzfromwithin.data.repository.datasource;
 
-import java.util.List;
-
-import es.jesuslopez.zgzfromwithin.data.entity.PlaceEntity;
-import es.jesuslopez.zgzfromwithin.data.local.LocalApi;
-import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.Datasource;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseEntity;
 import io.reactivex.Observable;
 
 /**
@@ -12,7 +8,11 @@ import io.reactivex.Observable;
  */
 
 public class PlaceLocalApiDataSource implements Datasource {
-    private final LocalApi localApi;
+    @Override
+    public Observable<ResponseEntity> listPlaceEntity() {
+        return null;
+    }
+/*    private final LocalApi localApi;
 
     public PlaceLocalApiDataSource(LocalApi localApi) {
         this.localApi = localApi;
@@ -21,5 +21,5 @@ public class PlaceLocalApiDataSource implements Datasource {
     @Override
     public Observable<List<PlaceEntity>> listPlaceEntity() {
         return localApi.placeListEntity();
-    }
+    }*/
 }

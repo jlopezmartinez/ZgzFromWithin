@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ZgzFromWithin</string>
+    <string name="restaurants">Restaurantes</string>
+    <string name="monuments">Monumentos</string>
+    <string name="accomodations">Alojamientos</string>
 
 </resources>

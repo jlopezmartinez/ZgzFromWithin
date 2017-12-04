@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "es.jesuslopez.zgzfromwithin"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion 16
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -43,12 +43,13 @@ dependencies {
 
     //DAGGER//
     compile daggerDependencies.dagger
-    compile daggerDependencies.daggerCompiler
+    annotationProcessor daggerDependencies.daggerCompiler
     provided daggerDependencies.daggerAnnotations
 
     //BUTTERKNIFE//
     compile butterKnife
-    compile butterKnifeCompiler
+    annotationProcessor butterKnifeCompiler
+
 
     //GSON//
     compile gson
@@ -58,4 +59,9 @@ dependencies {
 
     //SHINEBUTTON/
     compile shineButton
+
+    //RETROFIT/
+    compile retrofit
+    compile retrofitAdapter
+    compile retrofitConverter
 }
