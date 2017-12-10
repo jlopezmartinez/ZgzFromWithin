@@ -9,11 +9,13 @@ Libraries used in the project
 ------------------------------------
 * [RxJava & RxAndroid][1]
 * [Dagger 2][2]
-* [AppCompat, CardView, RecyclerView and DesignLibrary][3]
+* [Retrofit][3]
+* [AppCompat, CardView, RecyclerView and DesignLibrary][4]
 
 [1]: https://github.com/ReactiveX/RxAndroid
 [2]: https://github.com/google/dagger
-[3]: http://developer.android.com/intl/es/tools/support-library/index.html
+[3]: https://github.com/square/retrofit
+[4]: http://developer.android.com/intl/es/tools/support-library/index.html
 
 ## Userful resources 
 
