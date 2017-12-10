@@ -20,14 +20,14 @@ abstract class UseCase<T> {
         this.uiSchedule = uiSchedule;
     }
 
-    public void executeObserver(DisposableObserver<T> observer) {
+    public void executeObserver(DisposableObserver<T> observer, int from, int limit) {
         if (observer != null) {
-            final Observable<T> observable = createObservableUseCase().subscribeOn(executorSchedule).observeOn(uiSchedule);
+            final Observable<T> observable = createObservableUseCase(from, limit).subscribeOn(executorSchedule).observeOn(uiSchedule);
 
             DisposableObserver disposableObserver = observable.subscribeWith(observer);
             compositeDisposable.add(disposableObserver);
         }
     }
 
-    protected abstract Observable<T> createObservableUseCase();
+    protected abstract Observable<T> createObservableUseCase(int from, int limit);
 }

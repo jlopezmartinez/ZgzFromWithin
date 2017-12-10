@@ -15,7 +15,6 @@ public class ZfwApplication extends Application {
     public static final int monumentsScreen = 0;
     public static final int restaurantsScreen = 1;
     public static final int accomodationsScreen = 2;
-    public static int currentIndexPagination = 0;
 
     private SystemComponent systemComponent;
 

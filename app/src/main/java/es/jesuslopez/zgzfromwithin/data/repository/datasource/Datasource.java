@@ -8,5 +8,5 @@ import io.reactivex.Observable;
  */
 
 public interface Datasource {
-    Observable<ResponseEntity> listPlaceEntity();
+    Observable<ResponseEntity> listPlaceEntity(int from, int limit);
 }

@@ -16,7 +16,7 @@ public class PlaceNetApiDataSource implements Datasource {
     }
 
     @Override
-    public Observable<ResponseEntity> listPlaceEntity() {
-        return netApi.placeListEntity();
+    public Observable<ResponseEntity> listPlaceEntity(int from, int limit ) {
+        return netApi.placeListEntity(from, limit);
     }
 }

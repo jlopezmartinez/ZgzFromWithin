@@ -34,7 +34,7 @@ public class ListPlacesPresenter extends Presenter<ListPlacesPresenter.View> {
     public void init() {
         super.init();
         getView().showProgressBar();
-        getPlaces.executeObserver(new LisPlacesObserver());
+        getPlaces.executeObserver(new LisPlacesObserver(), 0, 10);
     }
 
     private final class LisPlacesObserver extends UseCaseObserver<List<Place>> {

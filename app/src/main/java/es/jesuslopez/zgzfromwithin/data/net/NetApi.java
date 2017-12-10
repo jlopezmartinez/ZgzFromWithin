@@ -8,5 +8,5 @@ import io.reactivex.Observable;
  */
 
 public interface NetApi {
-    Observable<ResponseEntity> placeListEntity();
+    Observable<ResponseEntity> placeListEntity(int from, int limit);
 }

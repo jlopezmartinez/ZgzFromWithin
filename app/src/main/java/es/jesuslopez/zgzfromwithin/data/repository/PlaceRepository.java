@@ -28,8 +28,8 @@ public class PlaceRepository implements Repository {
     }
 
     @Override
-    public Observable<List<Place>> placeList() {
-        return datasource.listPlaceEntity().map(new Function<ResponseEntity, List<Place>>() {
+    public Observable<List<Place>> placeList(int from, int limit) {
+        return datasource.listPlaceEntity(from, limit).map(new Function<ResponseEntity, List<Place>>() {
 
             @Override
             public List<Place> apply(ResponseEntity responseEntity) throws Exception {

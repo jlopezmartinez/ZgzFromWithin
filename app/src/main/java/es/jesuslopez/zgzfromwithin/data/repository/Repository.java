@@ -7,6 +7,6 @@ import io.reactivex.Observable;
  */
 
 public interface Repository {
-    Observable placeList();
+    Observable placeList(int from, int limit);
 
 }

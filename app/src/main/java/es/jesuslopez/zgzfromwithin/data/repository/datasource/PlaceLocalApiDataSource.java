@@ -9,7 +9,7 @@ import io.reactivex.Observable;
 
 public class PlaceLocalApiDataSource implements Datasource {
     @Override
-    public Observable<ResponseEntity> listPlaceEntity() {
+    public Observable<ResponseEntity> listPlaceEntity(int from, int limit) {
         return null;
     }
 /*    private final LocalApi localApi;

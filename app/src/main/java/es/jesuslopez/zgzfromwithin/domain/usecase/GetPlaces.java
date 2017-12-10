@@ -26,7 +26,7 @@ public class GetPlaces extends UseCase<List<Place>> {
     }
 
     @Override
-    protected Observable<List<Place>> createObservableUseCase() {
-        return placeRepository.placeList();
+    protected Observable<List<Place>> createObservableUseCase(int from, int limit) {
+        return placeRepository.placeList(from, limit);
     }
 }
