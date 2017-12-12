@@ -11,7 +11,7 @@ public class ResponseEntity {
     private int totalCount;
     private int start;
     private int rows;
-    private ArrayList<PlaceEntity> result;
+    private ArrayList<MonumentEntity> result;
 
     public int getTotalCount() {
         return totalCount;
@@ -37,11 +37,11 @@ public class ResponseEntity {
         this.rows = rows;
     }
 
-    public ArrayList<PlaceEntity> getResult() {
+    public ArrayList<MonumentEntity> getResult() {
         return result;
     }
 
-    public void setResult(ArrayList<PlaceEntity> result) {
+    public void setResult(ArrayList<MonumentEntity> result) {
         this.result = result;
     }
 }

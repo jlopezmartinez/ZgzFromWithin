@@ -8,15 +8,15 @@ import io.reactivex.Observable;
  * Created by JesusLopez on 15/7/17.
  */
 
-public class PlaceNetApiDataSource implements Datasource {
+public class MonumentNetApiDataSource implements Datasource {
     private final NetApi netApi;
 
-    public PlaceNetApiDataSource(NetApi netApi) {
+    public MonumentNetApiDataSource(NetApi netApi) {
         this.netApi = netApi;
     }
 
     @Override
-    public Observable<ResponseEntity> listPlaceEntity(int from, int limit ) {
+    public Observable<ResponseEntity> listPlaceEntity(int from, int limit) {
         return netApi.placeListEntity(from, limit);
     }
 }

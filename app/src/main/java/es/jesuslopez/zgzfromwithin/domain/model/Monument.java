@@ -4,7 +4,7 @@ package es.jesuslopez.zgzfromwithin.domain.model;
  * Created by JesusLopez on 2/7/17.
  */
 
-public class Place {
+public class Monument {
     private String name;
     private String phone;
     private String address;

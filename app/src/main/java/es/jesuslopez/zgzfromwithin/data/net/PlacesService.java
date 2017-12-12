@@ -13,5 +13,11 @@ import retrofit2.http.Query;
 
 public interface PlacesService {
     @GET("monumento.json?")
-    Observable<ResponseEntity> getListPlaces(@Query("rows") int rows, @Query("start") int start);
+    Observable<ResponseEntity> getListMonuments(@Query("rows") int rows, @Query("start") int start);
+
+    @GET("restaurante.json?")
+    Observable<ResponseEntity> getListRestaurants(@Query("rows") int rows, @Query("start") int start);
+
+    @GET("alojamiento.json?")
+    Observable<ResponseEntity> getListAccomodations(@Query("rows") int rows, @Query("start") int start);
 }

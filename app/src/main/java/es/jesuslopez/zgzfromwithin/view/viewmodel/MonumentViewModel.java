@@ -4,7 +4,7 @@ package es.jesuslopez.zgzfromwithin.view.viewmodel;
  * Created by JesusLopez on 7/7/17.
  */
 
-public class PlaceViewModel {
+public class MonumentViewModel {
     private String name;
     private String phone;
     private String address;

@@ -7,19 +7,19 @@ import io.reactivex.Observable;
  * Created by JesusLopez on 15/7/17.
  */
 
-public class PlaceLocalApiDataSource implements Datasource {
+public class MonumentLocalApiDataSource implements Datasource {
     @Override
     public Observable<ResponseEntity> listPlaceEntity(int from, int limit) {
         return null;
     }
 /*    private final LocalApi localApi;
 
-    public PlaceLocalApiDataSource(LocalApi localApi) {
+    public MonumentLocalApiDataSource(LocalApi localApi) {
         this.localApi = localApi;
     }
 
     @Override
-    public Observable<List<PlaceEntity>> listPlaceEntity() {
-        return localApi.placeListEntity();
+    public Observable<List<MonumentEntity>> listMonumentEntity() {
+        return localApi.monumentListEntity();
     }*/
 }

@@ -8,8 +8,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import es.jesuslopez.zgzfromwithin.data.entity.PlaceEntity;
-import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.JSONMapperPlaceEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.MonumentEntity;
+import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.JSONMapperMonumentEntity;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -21,19 +21,19 @@ import io.reactivex.ObservableOnSubscribe;
 public class LocalImpl implements LocalApi {
 
     private Context context;
-    private JSONMapperPlaceEntity jsonMapperPlaceEntity;
+    private JSONMapperMonumentEntity jsonMapperMonumentEntity;
 
-    public LocalImpl(Context context, JSONMapperPlaceEntity jsonMapperPlaceEntity) {
+    public LocalImpl(Context context, JSONMapperMonumentEntity jsonMapperMonumentEntity) {
         this.context = context;
-        this.jsonMapperPlaceEntity = jsonMapperPlaceEntity;
+        this.jsonMapperMonumentEntity = jsonMapperMonumentEntity;
     }
 
     @Override
-    public Observable<List<PlaceEntity>> placeListEntity() {
-        return Observable.create(new ObservableOnSubscribe<List<PlaceEntity>>() {
+    public Observable<List<MonumentEntity>> monumentListEntity() {
+        return Observable.create(new ObservableOnSubscribe<List<MonumentEntity>>() {
             @Override
-            public void subscribe(ObservableEmitter<List<PlaceEntity>> e) throws Exception {
-                List<PlaceEntity> listPlaces = getAllPlaces();
+            public void subscribe(ObservableEmitter<List<MonumentEntity>> e) throws Exception {
+                List<MonumentEntity> listPlaces = getAllPlaces();
                 if (listPlaces != null) {
                     e.onNext(listPlaces);
                     e.onComplete();
@@ -44,8 +44,8 @@ public class LocalImpl implements LocalApi {
         });
     }
 
-    private List<PlaceEntity> getAllPlaces() {
-        return jsonMapperPlaceEntity.getListPlacesEntityFromJSON(getDataFromLocal());
+    private List<MonumentEntity> getAllPlaces() {
+        return jsonMapperMonumentEntity.getListMonumentsEntityFromJSON(getDataFromLocal());
     }
 
     private String getDataFromLocal() {

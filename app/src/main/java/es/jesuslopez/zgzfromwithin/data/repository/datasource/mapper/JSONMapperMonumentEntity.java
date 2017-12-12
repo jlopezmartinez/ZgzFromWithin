@@ -9,24 +9,24 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import es.jesuslopez.zgzfromwithin.data.entity.PlaceEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.MonumentEntity;
 
 /**
  * Created by JesusLopez on 15/7/17.
  */
 
-public class JSONMapperPlaceEntity {
+public class JSONMapperMonumentEntity {
 
     private final Gson gson;
 
     @Inject
-    public JSONMapperPlaceEntity() {
+    public JSONMapperMonumentEntity() {
         gson = new Gson();
     }
 
-    public List<PlaceEntity> getListPlacesEntityFromJSON(String response) throws JsonSyntaxException {
+    public List<MonumentEntity> getListMonumentsEntityFromJSON(String response) throws JsonSyntaxException {
         try {
-            Type type = new TypeToken<List<PlaceEntity>>() {
+            Type type = new TypeToken<List<MonumentEntity>>() {
             }.getType();
             return gson.fromJson(response, type);
         } catch (Exception e) {

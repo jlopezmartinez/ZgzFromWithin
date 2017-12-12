@@ -2,7 +2,7 @@ package es.jesuslopez.zgzfromwithin.data.local;
 
 import java.util.List;
 
-import es.jesuslopez.zgzfromwithin.data.entity.PlaceEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.MonumentEntity;
 import io.reactivex.Observable;
 
 /**
@@ -10,5 +10,5 @@ import io.reactivex.Observable;
  */
 
 public interface LocalApi {
-    Observable<List<PlaceEntity>> placeListEntity();
+    Observable<List<MonumentEntity>> monumentListEntity();
 }

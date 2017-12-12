@@ -7,6 +7,6 @@ import io.reactivex.Observable;
  */
 
 public interface Repository {
-    Observable placeList(int from, int limit);
-
+    Observable monumentList(int from, int limit);
+    Observable restaurantList(int from, int limit);
 }

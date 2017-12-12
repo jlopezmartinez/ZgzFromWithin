@@ -29,7 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity
-            android:name=".view.activity.ListPlacesActivity"
+            android:name=".view.activity.ListMonumentsActivity"
             android:label="@string/app_name"></activity>
     </application>
 

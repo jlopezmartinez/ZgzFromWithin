@@ -11,6 +11,6 @@ public class NetImpl implements NetApi {
 
     @Override
     public Observable<ResponseEntity> placeListEntity(int from, int limit) {
-        return ServiceGenerator.getPlacesService().getListPlaces(limit, from);
+        return ServiceGenerator.getPlacesService().getListMonuments(limit, from);
     }
 }

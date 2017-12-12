@@ -26,7 +26,7 @@
                 android:layout_gravity="center_horizontal">
 
                 <ImageView
-                    android:id="@+id/placeImageView"
+                    android:id="@+id/monumentImageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -40,7 +40,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/placeNameView"
+                        android:id="@+id/monumentNameView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="16dp"

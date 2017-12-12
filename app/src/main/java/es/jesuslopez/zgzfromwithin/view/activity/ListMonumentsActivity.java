@@ -16,22 +16,24 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import es.jesuslopez.zgzfromwithin.R;
 import es.jesuslopez.zgzfromwithin.ZfwApplication;
-import es.jesuslopez.zgzfromwithin.view.adapter.ListPlacesAdapter;
+import es.jesuslopez.zgzfromwithin.view.adapter.ListMonumentsAdapter;
 import es.jesuslopez.zgzfromwithin.view.base.BaseActivity;
 import es.jesuslopez.zgzfromwithin.view.listener.EndlessRecyclerOnScrollListener;
-import es.jesuslopez.zgzfromwithin.view.presenter.ListPlacesPresenter;
-import es.jesuslopez.zgzfromwithin.view.viewmodel.PlaceViewModel;
+import es.jesuslopez.zgzfromwithin.view.presenter.ListMonumentsPresenter;
+import es.jesuslopez.zgzfromwithin.view.viewmodel.MonumentViewModel;
 
-public class ListPlacesActivity extends BaseActivity implements ListPlacesPresenter.View {
+public class ListMonumentsActivity extends BaseActivity implements ListMonumentsPresenter.View {
 
     @Inject
-    ListPlacesPresenter listPlacesPresenter;
-    @BindView(R.id.recyclerViewPlaces)
-    RecyclerView recyclerViewPlaces;
-    @BindView(R.id.progressBarListPlaces)
+    ListMonumentsPresenter listMonumentsPresenter;
+    @BindView(R.id.recyclerViewMonuments)
+    RecyclerView recyclerViewMonuments;
+    @BindView(R.id.progressBarListMonuments)
     ProgressBar progressBar;
+    @BindView(R.id.progressBarLoading)
+    ProgressBar progressBarLoading;
 
-    private ListPlacesAdapter listPlacesAdapter;
+    private ListMonumentsAdapter listMonumentsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class ListPlacesActivity extends BaseActivity implements ListPlacesPresen
 
     @Override
     protected int getLayoutActivity() {
-        return R.layout.activity_list_places;
+        return R.layout.activity_list_monuments;
     }
 
     private void setDagger() {
@@ -56,26 +58,27 @@ public class ListPlacesActivity extends BaseActivity implements ListPlacesPresen
     }
 
     private void setPresenter() {
-        listPlacesPresenter.setView(this);
+        listMonumentsPresenter.setView(this);
     }
 
     private void initializePresenter() {
-        listPlacesPresenter.init();
+        showProgressBar();
+        listMonumentsPresenter.init();
     }
 
     private void setAdapter() {
-        listPlacesAdapter = new ListPlacesAdapter();
+        listMonumentsAdapter = new ListMonumentsAdapter();
     }
 
     private void setView() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ListPlacesActivity.this);
-        recyclerViewPlaces.setLayoutManager(linearLayoutManager);
-        recyclerViewPlaces.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        if (listPlacesAdapter != null) {
-            recyclerViewPlaces.setAdapter(listPlacesAdapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ListMonumentsActivity.this);
+        recyclerViewMonuments.setLayoutManager(linearLayoutManager);
+        recyclerViewMonuments.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        if (listMonumentsAdapter != null) {
+            recyclerViewMonuments.setAdapter(listMonumentsAdapter);
         }
 
-        recyclerViewPlaces.addOnScrollListener(new EndlessRecyclerOnScrollListener(linearLayoutManager) {
+        recyclerViewMonuments.addOnScrollListener(new EndlessRecyclerOnScrollListener(linearLayoutManager) {
             @Override
             public void onLoadMore(int current_page) {
                 addDataToList();
@@ -85,6 +88,7 @@ public class ListPlacesActivity extends BaseActivity implements ListPlacesPresen
 
     private void addDataToList() {
         progressBar.setVisibility(View.VISIBLE);
+        listMonumentsPresenter.init();
     }
 
     @Override
@@ -93,21 +97,23 @@ public class ListPlacesActivity extends BaseActivity implements ListPlacesPresen
     }
 
     @Override
-    public void showListPlaces(List<PlaceViewModel> listPlaces) {
-        listPlacesAdapter.addAllItems(listPlaces);
-        listPlacesAdapter.notifyDataSetChanged();
+    public void showListMonuments(List<MonumentViewModel> listMonuments) {
+        progressBarLoading.setVisibility(View.GONE);
+        listMonumentsAdapter.addAllItems(listMonuments);
+        listMonumentsAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void showProgressBar() {
-        progressBar.setVisibility(View.VISIBLE);
-        recyclerViewPlaces.setVisibility(View.GONE);
+        progressBarLoading.setVisibility(View.VISIBLE);
+        recyclerViewMonuments.setVisibility(View.GONE);
     }
 
     @Override
     public void hideProgressBar() {
+        progressBarLoading.setVisibility(View.GONE);
         progressBar.setVisibility(View.GONE);
-        recyclerViewPlaces.setVisibility(View.VISIBLE);
+        recyclerViewMonuments.setVisibility(View.VISIBLE);
     }
 
     private void configToolbar() {

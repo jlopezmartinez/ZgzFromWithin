@@ -54,7 +54,7 @@ public class MenuActivity extends BaseActivity {
     }
 
     private void openListDetails(int selectedOption) {
-        startActivity(new Intent(MenuActivity.this, ListPlacesActivity.class).putExtra("selectedOption", selectedOption));
+        startActivity(new Intent(MenuActivity.this, ListMonumentsActivity.class).putExtra("selectedOption", selectedOption));
     }
 
     @Override

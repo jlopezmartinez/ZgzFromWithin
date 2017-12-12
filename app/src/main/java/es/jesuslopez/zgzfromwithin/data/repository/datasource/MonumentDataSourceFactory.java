@@ -10,17 +10,17 @@ import es.jesuslopez.zgzfromwithin.data.net.NetImpl;
  * Created by JesusLopez on 15/7/17.
  */
 
-public class PlaceDataSourceFactory {
+public class MonumentDataSourceFactory {
 
     private final Context context;
 
     @Inject
-    public PlaceDataSourceFactory(Context ctx) {
+    public MonumentDataSourceFactory(Context ctx) {
         this.context = ctx;
     }
 
-    public PlaceNetApiDataSource getDataSource() {
+    public MonumentNetApiDataSource getDataSource() {
         NetImpl netImpl = new NetImpl();
-        return new PlaceNetApiDataSource(netImpl);
+        return new MonumentNetApiDataSource(netImpl);
     }
 }

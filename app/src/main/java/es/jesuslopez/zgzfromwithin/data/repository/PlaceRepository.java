@@ -6,9 +6,9 @@ import javax.inject.Inject;
 
 import es.jesuslopez.zgzfromwithin.data.entity.ResponseEntity;
 import es.jesuslopez.zgzfromwithin.data.repository.datasource.Datasource;
-import es.jesuslopez.zgzfromwithin.data.repository.datasource.PlaceDataSourceFactory;
-import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.MapperPlaceToPlaceEntity;
-import es.jesuslopez.zgzfromwithin.domain.model.Place;
+import es.jesuslopez.zgzfromwithin.data.repository.datasource.MonumentDataSourceFactory;
+import es.jesuslopez.zgzfromwithin.data.repository.datasource.mapper.MapperMonumentToMonumentEntity;
+import es.jesuslopez.zgzfromwithin.domain.model.Monument;
 import io.reactivex.Observable;
 import io.reactivex.functions.Function;
 
@@ -19,21 +19,32 @@ import io.reactivex.functions.Function;
 public class PlaceRepository implements Repository {
 
     private final Datasource datasource;
-    private final MapperPlaceToPlaceEntity mapperPlaceToPlaceEntity;
+    private final MapperMonumentToMonumentEntity mapperMonumentToMonumentEntity;
 
     @Inject
-    public PlaceRepository(PlaceDataSourceFactory placeDataSourceFactory, MapperPlaceToPlaceEntity mapper) {
-        this.datasource = placeDataSourceFactory.getDataSource();
-        this.mapperPlaceToPlaceEntity = mapper;
+    public PlaceRepository(MonumentDataSourceFactory monumentDataSourceFactory, MapperMonumentToMonumentEntity mapper) {
+        this.datasource = monumentDataSourceFactory.getDataSource();
+        this.mapperMonumentToMonumentEntity = mapper;
     }
 
     @Override
-    public Observable<List<Place>> placeList(int from, int limit) {
-        return datasource.listPlaceEntity(from, limit).map(new Function<ResponseEntity, List<Place>>() {
+    public Observable<List<Monument>> monumentList(int from, int limit) {
+        return datasource.listPlaceEntity(from, limit).map(new Function<ResponseEntity, List<Monument>>() {
 
             @Override
-            public List<Place> apply(ResponseEntity responseEntity) throws Exception {
-                return mapperPlaceToPlaceEntity.map(responseEntity.getResult());
+            public List<Monument> apply(ResponseEntity responseEntity) throws Exception {
+                return mapperMonumentToMonumentEntity.map(responseEntity.getResult());
+            }
+        });
+    }
+
+    @Override
+    public Observable restaurantList(int from, int limit) {
+        return datasource.listPlaceEntity(from, limit).map(new Function<ResponseEntity, List<Monument>>() {
+
+            @Override
+            public List<Monument> apply(ResponseEntity responseEntity) throws Exception {
+                return mapperMonumentToMonumentEntity.map(responseEntity.getResult());
             }
         });
     }

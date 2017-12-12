@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".view.activity.ListPlacesActivity">
+    tools:context=".view.activity.ListMonumentsActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -43,15 +43,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/list_places" />
+    <include layout="@layout/list_monuments" />
 
-<!--    <ProgressBar
-        android:id="@+id/item_progress_bar"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:elevation="5dp"
-        android:padding="5dp"
-        android:visibility="gone" />-->
 </android.support.design.widget.CoordinatorLayout>
