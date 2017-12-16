@@ -12,10 +12,6 @@ import es.jesuslopez.zgzfromwithin.di.modules.MainModule;
 
 public class ZfwApplication extends Application {
 
-    public static final int monumentsScreen = 0;
-    public static final int restaurantsScreen = 1;
-    public static final int accomodationsScreen = 2;
-
     private SystemComponent systemComponent;
 
     @Override

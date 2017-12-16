@@ -6,12 +6,12 @@ import java.util.ArrayList;
  * Created by JesusLopez on 4/12/17.
  */
 
-public class ResponseEntity {
+public class ResponseRestaurantEntity {
 
     private int totalCount;
     private int start;
     private int rows;
-    private ArrayList<MonumentEntity> result;
+    private ArrayList<RestaurantEntity> result;
 
     public int getTotalCount() {
         return totalCount;
@@ -37,11 +37,11 @@ public class ResponseEntity {
         this.rows = rows;
     }
 
-    public ArrayList<MonumentEntity> getResult() {
+    public ArrayList<RestaurantEntity> getResult() {
         return result;
     }
 
-    public void setResult(ArrayList<MonumentEntity> result) {
+    public void setResult(ArrayList<RestaurantEntity> result) {
         this.result = result;
     }
 }

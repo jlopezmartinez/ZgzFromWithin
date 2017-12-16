@@ -1,22 +1,53 @@
-package es.jesuslopez.zgzfromwithin.domain.model;
+package es.jesuslopez.zgzfromwithin.data.entity;
+
+import com.google.gson.annotations.SerializedName;
+
+import es.jesuslopez.zgzfromwithin.domain.model.Geometry;
+import es.jesuslopez.zgzfromwithin.domain.model.Tel;
 
 /**
- * Created by JesusLopez on 2/7/17.
+ * Created by JesusLopez on 11/7/17.
  */
 
-public class Restaurant {
+public class RestaurantEntity {
+
+    @SerializedName("title")
     private String name;
+
+    @SerializedName("tel")
     private Tel phone;
+
+    @SerializedName("streetAddress")
     private String address;
+
+    @SerializedName("postalCode")
     private String postalCode;
+
+    @SerializedName("addressLocality")
     private String locality;
+
+    @SerializedName("email")
     private String email;
+
+    @SerializedName("url")
     private String webPage;
+
+    @SerializedName("image")
     private String image;
+
+    @SerializedName("logo")
     private String logo;
+
+    @SerializedName("tenedores")
     private String forks;
+
+    @SerializedName("capacidad")
     private String capacity;
+
+    @SerializedName("geometry")
     private Geometry geometry;
+
+    @SerializedName("accesibilidad")
     private String accesibility;
 
     public String getName() {
@@ -41,14 +72,6 @@ public class Restaurant {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public String getPostalCode() {
@@ -81,6 +104,14 @@ public class Restaurant {
 
     public void setWebPage(String webPage) {
         this.webPage = webPage;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getLogo() {

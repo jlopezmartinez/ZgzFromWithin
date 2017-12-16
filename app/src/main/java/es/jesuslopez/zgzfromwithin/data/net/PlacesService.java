@@ -1,6 +1,7 @@
 package es.jesuslopez.zgzfromwithin.data.net;
 
-import es.jesuslopez.zgzfromwithin.data.entity.ResponseEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseMonumentEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseRestaurantEntity;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -13,11 +14,11 @@ import retrofit2.http.Query;
 
 public interface PlacesService {
     @GET("monumento.json?")
-    Observable<ResponseEntity> getListMonuments(@Query("rows") int rows, @Query("start") int start);
+    Observable<ResponseMonumentEntity> getListMonuments(@Query("rows") int rows, @Query("start") int start);
 
     @GET("restaurante.json?")
-    Observable<ResponseEntity> getListRestaurants(@Query("rows") int rows, @Query("start") int start);
+    Observable<ResponseRestaurantEntity> getListRestaurants(@Query("rows") int rows, @Query("start") int start);
 
-    @GET("alojamiento.json?")
-    Observable<ResponseEntity> getListAccomodations(@Query("rows") int rows, @Query("start") int start);
+    //@GET("alojamiento.json?")
+    //Observable<ResponseEntity> getListAccomodations(@Query("rows") int rows, @Query("start") int start);
 }

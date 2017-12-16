@@ -5,6 +5,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 import es.jesuslopez.zgzfromwithin.di.modules.MainModule;
 import es.jesuslopez.zgzfromwithin.view.activity.ListMonumentsActivity;
+import es.jesuslopez.zgzfromwithin.view.activity.ListRestaurantsActivity;
 import es.jesuslopez.zgzfromwithin.view.activity.MenuActivity;
 
 /**
@@ -17,4 +18,6 @@ public interface SystemComponent {
     void inject(MenuActivity menuActivity);
 
     void inject(ListMonumentsActivity listMonumentsActivity);
+
+    void inject(ListRestaurantsActivity listRestaurantsActivity);
 }

@@ -1,6 +1,7 @@
 package es.jesuslopez.zgzfromwithin.data.net;
 
-import es.jesuslopez.zgzfromwithin.data.entity.ResponseEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseMonumentEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseRestaurantEntity;
 import io.reactivex.Observable;
 
 /**
@@ -8,5 +9,6 @@ import io.reactivex.Observable;
  */
 
 public interface NetApi {
-    Observable<ResponseEntity> placeListEntity(int from, int limit);
+    Observable<ResponseRestaurantEntity> restaurantListEntity(int from, int limit);
+    Observable<ResponseMonumentEntity> monumentListEntity(int from, int limit);
 }

@@ -8,7 +8,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import es.jesuslopez.zgzfromwithin.ZfwApplication;
-import es.jesuslopez.zgzfromwithin.data.repository.PlaceRepository;
+import es.jesuslopez.zgzfromwithin.data.repository.MonumentRepository;
 import es.jesuslopez.zgzfromwithin.data.repository.Repository;
 import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -31,8 +31,8 @@ public class MainModule {
 
     @Provides
     @Singleton
-    Repository provideRepository(PlaceRepository placeRepository) {
-        return placeRepository;
+    Repository provideRepository(MonumentRepository MonumentRepository) {
+        return MonumentRepository;
     }
 
     @Provides

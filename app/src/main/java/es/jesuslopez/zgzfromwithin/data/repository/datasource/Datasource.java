@@ -1,6 +1,7 @@
 package es.jesuslopez.zgzfromwithin.data.repository.datasource;
 
-import es.jesuslopez.zgzfromwithin.data.entity.ResponseEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseMonumentEntity;
+import es.jesuslopez.zgzfromwithin.data.entity.ResponseRestaurantEntity;
 import io.reactivex.Observable;
 
 /**
@@ -8,5 +9,7 @@ import io.reactivex.Observable;
  */
 
 public interface Datasource {
-    Observable<ResponseEntity> listPlaceEntity(int from, int limit);
+    Observable<ResponseMonumentEntity> listMonumentEntity(int from, int limit);
+
+    Observable<ResponseRestaurantEntity> lisRestaurantEntity(int from, int limit);
 }

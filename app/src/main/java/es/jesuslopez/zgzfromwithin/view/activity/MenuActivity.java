@@ -8,7 +8,6 @@ import android.widget.RelativeLayout;
 
 import butterknife.BindView;
 import es.jesuslopez.zgzfromwithin.R;
-import es.jesuslopez.zgzfromwithin.ZfwApplication;
 import es.jesuslopez.zgzfromwithin.view.base.BaseActivity;
 
 public class MenuActivity extends BaseActivity {
@@ -34,27 +33,27 @@ public class MenuActivity extends BaseActivity {
         buttonMomunments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openListDetails(ZfwApplication.monumentsScreen);
+                openListDetails(new Intent(MenuActivity.this, ListMonumentsActivity.class));
             }
         });
 
         buttonAccomodations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openListDetails(ZfwApplication.restaurantsScreen);
+                openListDetails(new Intent(MenuActivity.this, ListRestaurantsActivity.class));
             }
         });
 
         buttonRestaurants.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openListDetails(ZfwApplication.accomodationsScreen);
+                openListDetails(new Intent(MenuActivity.this, ListRestaurantsActivity.class));
             }
         });
     }
 
-    private void openListDetails(int selectedOption) {
-        startActivity(new Intent(MenuActivity.this, ListMonumentsActivity.class).putExtra("selectedOption", selectedOption));
+    private void openListDetails(Intent intent) {
+        startActivity(intent);
     }
 
     @Override

@@ -2,13 +2,19 @@ package es.jesuslopez.zgzfromwithin.data.repository.datasource;
 
 import es.jesuslopez.zgzfromwithin.data.entity.ResponseMonumentEntity;
 import es.jesuslopez.zgzfromwithin.data.entity.ResponseRestaurantEntity;
+import es.jesuslopez.zgzfromwithin.data.net.NetApi;
 import io.reactivex.Observable;
 
 /**
  * Created by JesusLopez on 15/7/17.
  */
 
-public class MonumentLocalApiDataSource implements Datasource {
+public class RestaurantNetApiDataSource implements Datasource {
+    private final NetApi netApi;
+
+    public RestaurantNetApiDataSource(NetApi netApi) {
+        this.netApi = netApi;
+    }
 
     @Override
     public Observable<ResponseMonumentEntity> listMonumentEntity(int from, int limit) {
@@ -17,16 +23,6 @@ public class MonumentLocalApiDataSource implements Datasource {
 
     @Override
     public Observable<ResponseRestaurantEntity> lisRestaurantEntity(int from, int limit) {
-        return null;
+        return netApi.restaurantListEntity(from, limit);
     }
-/*    private final LocalApi localApi;
-
-    public MonumentLocalApiDataSource(LocalApi localApi) {
-        this.localApi = localApi;
-    }
-
-    @Override
-    public Observable<List<MonumentEntity>> listMonumentEntity() {
-        return localApi.monumentListEntity();
-    }*/
 }

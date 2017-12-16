@@ -1,10 +1,13 @@
-package es.jesuslopez.zgzfromwithin.domain.model;
+package es.jesuslopez.zgzfromwithin.view.viewmodel.mapper;
+
+import es.jesuslopez.zgzfromwithin.domain.model.Geometry;
+import es.jesuslopez.zgzfromwithin.domain.model.Tel;
 
 /**
- * Created by JesusLopez on 2/7/17.
+ * Created by JesusLopez on 7/7/17.
  */
 
-public class Restaurant {
+public class RestaurantViewModel {
     private String name;
     private Tel phone;
     private String address;
@@ -18,6 +21,7 @@ public class Restaurant {
     private String capacity;
     private Geometry geometry;
     private String accesibility;
+
 
     public String getName() {
         return name;
@@ -41,14 +45,6 @@ public class Restaurant {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public String getPostalCode() {
@@ -81,6 +77,14 @@ public class Restaurant {
 
     public void setWebPage(String webPage) {
         this.webPage = webPage;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getLogo() {
