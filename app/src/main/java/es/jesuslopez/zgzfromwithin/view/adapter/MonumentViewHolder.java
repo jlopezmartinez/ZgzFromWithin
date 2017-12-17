@@ -33,9 +33,9 @@ public class MonumentViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setView(MonumentViewModel monumentViewModel, Context context) {
+        this.context = context;
         setmonumentName(monumentViewModel.getName());
         setmonumentImage(monumentViewModel.getImage());
-        this.context = context;
     }
 
     private void setmonumentName(String monumentTitle) {
