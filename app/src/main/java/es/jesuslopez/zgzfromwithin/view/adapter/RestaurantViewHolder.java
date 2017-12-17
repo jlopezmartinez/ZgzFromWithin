@@ -1,5 +1,6 @@
 package es.jesuslopez.zgzfromwithin.view.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,13 +26,15 @@ public class RestaurantViewHolder extends RecyclerView.ViewHolder {
     ImageView restaurantImageView;
 
     private final String BASE_IMAGE_URL = "https://www.zaragoza.es";
+    private Context context;
 
     public RestaurantViewHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
     }
 
-    public void setView(RestaurantViewModel restaurantViewModel) {
+    public void setView(RestaurantViewModel restaurantViewModel, Context context) {
+        this.context = context;
         setRestaurantName(restaurantViewModel.getName());
         setRestaurantImage(BASE_IMAGE_URL + restaurantViewModel.getImage());
     }
@@ -41,6 +44,6 @@ public class RestaurantViewHolder extends RecyclerView.ViewHolder {
     }
 
     private void setRestaurantImage(String monumentImage) {
-        Picasso.with(itemView.getContext()).load(monumentImage).fit().centerCrop().into(restaurantImageView);
+        Picasso.with(itemView.getContext()).load(monumentImage).fit().centerCrop().error(context.getResources().getDrawable(R.drawable.item_error)).fit().centerCrop().into(restaurantImageView);
     }
 }

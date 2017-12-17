@@ -67,7 +67,7 @@ public class ListRestaurantsActivity extends BaseActivity implements ListRestaur
     }
 
     private void setAdapter() {
-        listRestaurantsAdapter = new ListRestaurantsAdapter();
+        listRestaurantsAdapter = new ListRestaurantsAdapter(ListRestaurantsActivity.this);
     }
 
     private void setView() {

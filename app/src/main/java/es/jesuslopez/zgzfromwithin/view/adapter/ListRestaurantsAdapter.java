@@ -1,5 +1,6 @@
 package es.jesuslopez.zgzfromwithin.view.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +20,11 @@ import es.jesuslopez.zgzfromwithin.view.viewmodel.mapper.RestaurantViewModel;
 public class ListRestaurantsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<RestaurantViewModel> listRestaurants;
+    private Context context;
 
-    public ListRestaurantsAdapter() {
+    public ListRestaurantsAdapter(Context context) {
         listRestaurants = new ArrayList<>();
+        this.context = context;
     }
 
     @Override
@@ -33,7 +36,7 @@ public class ListRestaurantsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         RestaurantViewHolder restaurantViewHolder = (RestaurantViewHolder) holder;
-        restaurantViewHolder.setView(listRestaurants.get(position));
+        restaurantViewHolder.setView(listRestaurants.get(position), context);
     }
 
     @Override

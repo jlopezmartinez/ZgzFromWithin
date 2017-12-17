@@ -67,7 +67,7 @@ public class ListMonumentsActivity extends BaseActivity implements ListMonuments
     }
 
     private void setAdapter() {
-        listMonumentsAdapter = new ListMonumentsAdapter();
+        listMonumentsAdapter = new ListMonumentsAdapter(ListMonumentsActivity.this);
     }
 
     private void setView() {

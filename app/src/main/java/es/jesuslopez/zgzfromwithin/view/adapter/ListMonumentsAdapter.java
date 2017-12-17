@@ -1,5 +1,6 @@
 package es.jesuslopez.zgzfromwithin.view.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +20,11 @@ import es.jesuslopez.zgzfromwithin.view.viewmodel.MonumentViewModel;
 public class ListMonumentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<MonumentViewModel> listMonuments;
+    private Context context;
 
-    public ListMonumentsAdapter() {
+    public ListMonumentsAdapter(Context context) {
         listMonuments = new ArrayList<>();
+        this.context = context;
     }
 
     @Override
@@ -33,7 +36,7 @@ public class ListMonumentsAdapter extends RecyclerView.Adapter<RecyclerView.View
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         MonumentViewHolder monumentViewHolder = (MonumentViewHolder) holder;
-        monumentViewHolder.setView(listMonuments.get(position));
+        monumentViewHolder.setView(listMonuments.get(position), context);
     }
 
     @Override
