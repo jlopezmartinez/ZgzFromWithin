@@ -1,1 +1,1 @@
-{"response":{"numFound":258,"start":0,"docs":[{"id":25,"title":"hack"},{"id":26,"title":"hack2"}]}}
+{"response":{"numFound":258,"start":0,"docs":[{"id":25,"title":"hack","movida":1000},{"id":26,"title":"hack2","movida":1000}]}}
