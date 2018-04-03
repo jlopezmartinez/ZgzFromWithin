@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<envelope 
+    xmlns="http://cict.nl/IPS_XML">
+    <recipe code="00000000117507259_20180403_095320" id="2409" type="IPS">
+        <order code="00000000117507259_20180403_095320" id="1018"/>
+        <recipestatistics>
+            <statistic name="avgfillratio" value="0.372996346354" />
+            <statistic name="calculationtime" value="33093" />
+            <statistic name="calcversion" value="v4.20.00040" />
+            <statistic name="carrierscore" value="0.512005000000" />
+            <statistic name="containercount" value="2" />
+            <statistic name="efficiencyscore" value="1.000000000000" />
+            <statistic name="expectedcarriercount" value="1" />
+            <statistic name="expectedcontainercount" value="1" />
+            <statistic name="familyspreadscore" value="1.000000000000" />
+            <statistic name="finalcontainercount" value="2" />
+            <statistic name="footprint" value="1920000" />
+            <statistic name="ipscalcversion" value="v4.20.00040" />
+            <statistic name="labelvisibilityscore" value="1.000000000000" />
+            <statistic name="loadmeters" value="1920000" />
+            <statistic name="orderlinespreadscore" value="1.000000000000" />
+            <statistic name="packagevisibilityscore" value="0.962316176470" />
+            <statistic name="performanceset" value="10" />
+            <statistic name="recipescore" value="0.577440896426" />
+            <statistic name="stabilityscore" value="0.445221432999" />
+            <statistic name="stackdensityscore" value="0.618620725905" />
+            <statistic name="strappabilityscore" value="0.826549665295" />
+            <statistic name="totalfootprint" value="1920000" />
+            <statistic name="totalvolume" value="3063360000" />
+            <statistic name="volume" value="3063360000" />
+        </recipestatistics>
+        <containerrecipelist>
+            <containerrecipe code="2658" containertypecode="EUR120X080">
+                <containerstatistics>
+                    <statistic name="containerscore" value="0.445221432999" />
+                    <statistic name="efficiencyscore" value="1.000000000000" />
+                    <statistic name="familycount" value="1" />
+                    <statistic name="fillratiomax" value="0.388414317708" />
+                    <statistic name="fillratiotop" value="0.602971773932" />
+                    <statistic name="footprint" value="960000" />
+                    <statistic name="isfinalcontainer" value="1" />
+                    <statistic name="labelvisibilityscore" value="1.000000000000" />
+                    <statistic name="optimalcost" value="0" />
+                    <statistic name="optimalroutedistancecarrier" value="0" />
+                    <statistic name="optimalroutedistanceman" value="0" />
+                    <statistic name="packagecount" value="64" />
+                    <statistic name="packagevisibilityscore" value="0.968750000000" />
+                    <statistic name="packagevolume" value="894906588" />
+                    <statistic name="packageweight" value="105788" />
+                    <statistic name="stabilityscore" value="0.445221432999" />
+                    <statistic name="strappabilityscore" value="0.815398047933" />
+                    <statistic name="topheight" value="1546" />
+                    <statistic name="totalcontentamount" value="64" />
+                    <statistic name="totalcost" value="1778600" />
+                    <statistic name="totalheight" value="1691" />
+                    <statistic name="totallength" value="1200" />
+                    <statistic name="totalroutedistancecarrier" value="170660" />
+                    <statistic name="totalroutedistanceman" value="0" />
+                    <statistic name="totalvolume" value="1623360000" />
+                    <statistic name="totalweight" value="105788" />
+                    <statistic name="totalwidth" value="800" />
+                </containerstatistics>
+                <containercontentlist>
+                    <containercontentitem type="PRODUCT" productcode="1000080113_CU" subordercode="" packagingtype="" amount="7" />
+                    <containercontentitem type="PRODUCT" productcode="1002150400_CU" subordercode="" packagingtype="" amount="6" />
+                    <containercontentitem type="PRODUCT" productcode="1000090107_CU" subordercode="" packagingtype="" amount="12" />
+                    <containercontentitem type="PRODUCT" productcode="1003050302_CU" subordercode="" packagingtype="" amount="12" />
+                    <containercontentitem type="PRODUCT" productcode="1000220200_CU" subordercode="" packagingtype="" amount="9" />
+                    <containercontentitem type="PRODUCT" productcode="1001040000_CU" subordercode="" packagingtype="" amount="6" />
+                    <containercontentitem type="PRODUCT" productcode="1000040206_CU" subordercode="" packagingtype="" amount="6" />
+                    <containercontentitem type="PRODUCT" productcode="1000030108_CU" subordercode="" packagingtype="" amount="6" />
+                </containercontentlist>
+                <instructionlist>
+                    <instruction index="0" typecode="MoveC" destinationcode="JP-X01.12" distance="0" />
+                    <instruction index="1" typecode="MoveC" destinationcode="JP-X01.11" distance="5750" />
+                    <instruction index="2" typecode="MoveC" destinationcode="JP-X01.10" distance="5750" />
+                    <instruction index="3" typecode="MoveC" destinationcode="JP-X01.09" distance="5750" />
+                    <instruction index="4" typecode="MoveC" destinationcode="JP-X01.08" distance="5750" />
+                    <instruction index="5" typecode="MoveC" destinationcode="JP-X01.07" distance="5750" />
+                    <instruction index="6" typecode="MoveC" destinationcode="JP-X01.06" distance="5750" />
+                    <instruction index="7" typecode="MoveC" destinationcode="JP-X01.05" distance="5750" />
+                    <instruction index="8" typecode="MoveC" destinationcode="JP-A05.01" distance="1380" />
+                    <instruction index="9" typecode="MoveC" destinationcode="CS-A05.01.002" distance="460" />
+                    <instruction index="10" typecode="ParkC" destinationcode="CS-A05.01.002" distance="0" />
+                    <instruction index="11" typecode="PickP" locationcode="310.023.01" orderlineid="7609" productcode="1000040206" amount="6" pickerdistance="0" packageindexlist="1,3,5,6,7,8" />
+                    <instruction index="12" typecode="MoveC" destinationcode="CS-A05.01.008" distance="2760" />
+                    <instruction index="13" typecode="ParkC" destinationcode="CS-A05.01.008" distance="0" />
+                    <instruction index="14" typecode="PickP" locationcode="310.026.01" orderlineid="7607" productcode="1000090107" amount="12" pickerdistance="0" packageindexlist="0,2,4,9,10,11,12,13,14,15,18,19" />
+                    <instruction index="15" typecode="MoveC" destinationcode="CS-A05.01.022" distance="6440" />
+                    <instruction index="16" typecode="ParkC" destinationcode="CS-A05.01.022" distance="0" />
+                    <instruction index="17" typecode="PickP" locationcode="309.033.01" orderlineid="7614" productcode="1002150400" amount="6" pickerdistance="0" packageindexlist="16,17,20,21,26,30" />
+                    <instruction index="18" typecode="MoveC" destinationcode="CS-A05.01.024" distance="920" />
+                    <instruction index="19" typecode="ParkC" destinationcode="CS-A05.01.024" distance="0" />
+                    <instruction index="20" typecode="PickP" locationcode="309.034.01" orderlineid="7605" productcode="1000220200" amount="9" pickerdistance="0" packageindexlist="22,23,24,25,27,28,29,31,32" />
+                    <instruction index="21" typecode="MoveC" destinationcode="CS-A05.01.028" distance="1840" />
+                    <instruction index="22" typecode="ParkC" destinationcode="CS-A05.01.028" distance="0" />
+                    <instruction index="23" typecode="PickP" locationcode="310.036.01" orderlineid="7606" productcode="1000030108" amount="6" pickerdistance="0" packageindexlist="33,34,35,36,37,39" />
+                    <instruction index="24" typecode="MoveC" destinationcode="CS-A05.01.032" distance="1840" />
+                    <instruction index="25" typecode="ParkC" destinationcode="CS-A05.01.032" distance="0" />
+                    <instruction index="26" typecode="PickP" locationcode="309.038.01" orderlineid="7608" productcode="1000080113" amount="7" pickerdistance="0" packageindexlist="38,40,41,42,43,44,45" />
+                    <instruction index="27" typecode="MoveC" destinationcode="JP-A05.02" distance="2300" />
+                    <instruction index="28" typecode="MoveC" destinationcode="JP-X02.05" distance="1380" />
+                    <instruction index="29" typecode="MoveC" destinationcode="JP-A05.03" distance="1380" />
+                    <instruction index="30" typecode="MoveC" destinationcode="JP-A05.04" distance="17480" />
+                    <instruction index="31" typecode="MoveC" destinationcode="JP-A05.05" distance="3680" />
+                    <instruction index="32" typecode="MoveC" destinationcode="CS-A05.05.008" distance="3220" />
+                    <instruction index="33" typecode="ParkC" destinationcode="CS-A05.05.008" distance="0" />
+                    <instruction index="34" typecode="PickP" locationcode="309.070.01" orderlineid="7616" productcode="1003050302" amount="12" pickerdistance="0" packageindexlist="46,47,48,49,50,51,52,53,54,55,56,57" />
+                    <instruction index="35" typecode="MoveC" destinationcode="JP-A05.05" distance="3220" />
+                    <instruction index="36" typecode="MoveC" destinationcode="JP-A05.04" distance="3680" />
+                    <instruction index="37" typecode="MoveC" destinationcode="JP-A05.03" distance="17480" />
+                    <instruction index="38" typecode="MoveC" destinationcode="JP-X02.05" distance="1380" />
+                    <instruction index="39" typecode="MoveC" destinationcode="JP-X02.06" distance="5750" />
+                    <instruction index="40" typecode="MoveC" destinationcode="JP-A06.02" distance="1380" />
+                    <instruction index="41" typecode="MoveC" destinationcode="CS-A06.01.030" distance="3220" />
+                    <instruction index="42" typecode="ParkC" destinationcode="CS-A06.01.030" distance="0" />
+                    <instruction index="43" typecode="PickP" locationcode="311.037.01" orderlineid="7611" productcode="1001040000" amount="6" pickerdistance="0" packageindexlist="58,59,60,61,62,63" />
+                    <instruction index="44" typecode="MoveC" destinationcode="JP-A06.01" distance="13340" />
+                    <instruction index="45" typecode="MoveC" destinationcode="JP-X01.06" distance="1380" />
+                    <instruction index="46" typecode="MoveC" destinationcode="JP-X01.07" distance="5750" />
+                    <instruction index="47" typecode="MoveC" destinationcode="JP-X01.08" distance="5750" />
+                    <instruction index="48" typecode="MoveC" destinationcode="JP-X01.09" distance="5750" />
+                    <instruction index="49" typecode="MoveC" destinationcode="JP-X01.10" distance="5750" />
+                    <instruction index="50" typecode="MoveC" destinationcode="JP-X01.11" distance="5750" />
+                    <instruction index="51" typecode="MoveC" destinationcode="JP-X01.12" distance="5750" />
+                </instructionlist>
+            </containerrecipe>
+            <containerrecipe code="2657" containertypecode="EUR120X080">
+                <containerstatistics>
+                    <statistic name="containerscore" value="0.720248310926" />
+                    <statistic name="efficiencyscore" value="1.000000000000" />
+                    <statistic name="familycount" value="1" />
+                    <statistic name="fillratiomax" value="0.357578375000" />
+                    <statistic name="fillratiotop" value="0.633349151292" />
+                    <statistic name="footprint" value="960000" />
+                    <statistic name="isfinalcontainer" value="1" />
+                    <statistic name="labelvisibilityscore" value="1.000000000000" />
+                    <statistic name="optimalcost" value="0" />
+                    <statistic name="optimalroutedistancecarrier" value="0" />
+                    <statistic name="optimalroutedistanceman" value="0" />
+                    <statistic name="packagecount" value="68" />
+                    <statistic name="packagevisibilityscore" value="0.955882352941" />
+                    <statistic name="packagevolume" value="823860576" />
+                    <statistic name="packageweight" value="99568" />
+                    <statistic name="stabilityscore" value="0.720248310926" />
+                    <statistic name="strappabilityscore" value="0.837701282657" />
+                    <statistic name="topheight" value="1355" />
+                    <statistic name="totalcontentamount" value="68" />
+                    <statistic name="totalcost" value="1839100" />
+                    <statistic name="totalheight" value="1500" />
+                    <statistic name="totallength" value="1200" />
+                    <statistic name="totalroutedistancecarrier" value="179860" />
+                    <statistic name="totalroutedistanceman" value="0" />
+                    <statistic name="totalvolume" value="1440000000" />
+                    <statistic name="totalweight" value="99568" />
+                    <statistic name="totalwidth" value="800" />
+                </containerstatistics>
+                <containercontentlist>
+                    <containercontentitem type="PRODUCT" productcode="1003190300_CU" subordercode="" packagingtype="" amount="12" />
+                    <containercontentitem type="PRODUCT" productcode="1002070402_CU" subordercode="" packagingtype="" amount="6" />
+                    <containercontentitem type="PRODUCT" productcode="1003010001_CU" subordercode="" packagingtype="" amount="12" />
+                    <containercontentitem type="PRODUCT" productcode="1001210300_CU" subordercode="" packagingtype="" amount="6" />
+                    <containercontentitem type="PRODUCT" productcode="1005210000_CU" subordercode="" packagingtype="" amount="12" />
+                    <containercontentitem type="PRODUCT" productcode="1002210403_CU" subordercode="" packagingtype="" amount="8" />
+                    <containercontentitem type="PRODUCT" productcode="1003240303_CU" subordercode="" packagingtype="" amount="6" />
+                    <containercontentitem type="PRODUCT" productcode="1000380600_CU" subordercode="" packagingtype="" amount="6" />
+                </containercontentlist>
+                <instructionlist>
+                    <instruction index="0" typecode="MoveC" destinationcode="JP-X01.12" distance="0" />
+                    <instruction index="1" typecode="MoveC" destinationcode="JP-A12.01" distance="1380" />
+                    <instruction index="2" typecode="MoveC" destinationcode="JP-A12.02" distance="16560" />
+                    <instruction index="3" typecode="MoveC" destinationcode="JP-X02.12" distance="1380" />
+                    <instruction index="4" typecode="MoveC" destinationcode="JP-X02.11" distance="5750" />
+                    <instruction index="5" typecode="MoveC" destinationcode="JP-X02.10" distance="5750" />
+                    <instruction index="6" typecode="MoveC" destinationcode="JP-X02.09" distance="5750" />
+                    <instruction index="7" typecode="MoveC" destinationcode="JP-X02.08" distance="5750" />
+                    <instruction index="8" typecode="MoveC" destinationcode="JP-X02.07" distance="5750" />
+                    <instruction index="9" typecode="MoveC" destinationcode="JP-X02.06" distance="5750" />
+                    <instruction index="10" typecode="MoveC" destinationcode="JP-X02.05" distance="5750" />
+                    <instruction index="11" typecode="MoveC" destinationcode="JP-A05.03" distance="1380" />
+                    <instruction index="12" typecode="MoveC" destinationcode="JP-A05.04" distance="17480" />
+                    <instruction index="13" typecode="MoveC" destinationcode="JP-A05.05" distance="3680" />
+                    <instruction index="14" typecode="MoveC" destinationcode="CS-A05.05.012" distance="5060" />
+                    <instruction index="15" typecode="ParkC" destinationcode="CS-A05.05.012" distance="0" />
+                    <instruction index="16" typecode="PickP" locationcode="310.072.01" orderlineid="7617" productcode="1003190300" amount="12" pickerdistance="0" packageindexlist="0,1,2,5,6,7,20,21,22,23,24,25" />
+                    <instruction index="17" typecode="MoveC" destinationcode="CS-A05.05.018" distance="2760" />
+                    <instruction index="18" typecode="ParkC" destinationcode="CS-A05.05.018" distance="0" />
+                    <instruction index="19" typecode="PickP" locationcode="310.075.01" orderlineid="7615" productcode="1002210403" amount="8" pickerdistance="0" packageindexlist="3,4,8,9,10,17,18,19" />
+                    <instruction index="20" typecode="MoveC" destinationcode="CS-A05.05.016" distance="920" />
+                    <instruction index="21" typecode="ParkC" destinationcode="CS-A05.05.016" distance="0" />
+                    <instruction index="22" typecode="PickP" locationcode="310.074.01" orderlineid="7618" productcode="1003240303" amount="6" pickerdistance="0" packageindexlist="11,12,13,14,15,16" />
+                    <instruction index="23" typecode="MoveC" destinationcode="JP-A05.05" distance="6900" />
+                    <instruction index="24" typecode="MoveC" destinationcode="JP-X03.05" distance="1840" />
+                    <instruction index="25" typecode="MoveC" destinationcode="JP-X03.06" distance="5750" />
+                    <instruction index="26" typecode="MoveC" destinationcode="JP-A06.04" distance="1840" />
+                    <instruction index="27" typecode="MoveC" destinationcode="CS-A06.03.014" distance="11500" />
+                    <instruction index="28" typecode="ParkC" destinationcode="CS-A06.03.014" distance="0" />
+                    <instruction index="29" typecode="PickP" locationcode="312.050.01" orderlineid="7619" productcode="1003010001" amount="12" pickerdistance="0" packageindexlist="26,27,28,29,30,31,32,33,34,35,36,37" />
+                    <instruction index="30" typecode="MoveC" destinationcode="CS-A06.03.006" distance="3680" />
+                    <instruction index="31" typecode="ParkC" destinationcode="CS-A06.03.006" distance="0" />
+                    <instruction index="32" typecode="PickP" locationcode="311.046.01" orderlineid="7620" productcode="1005210000" amount="12" pickerdistance="0" packageindexlist="38,39,40,41,42,43,44,45,46,47,48,55" />
+                    <instruction index="33" typecode="MoveC" destinationcode="JP-A06.03" distance="2300" />
+                    <instruction index="34" typecode="MoveC" destinationcode="JP-X02.06" distance="1380" />
+                    <instruction index="35" typecode="MoveC" destinationcode="JP-A06.02" distance="1380" />
+                    <instruction index="36" typecode="MoveC" destinationcode="CS-A06.01.024" distance="5980" />
+                    <instruction index="37" typecode="ParkC" destinationcode="CS-A06.01.024" distance="0" />
+                    <instruction index="38" typecode="PickP" locationcode="312.034.01" orderlineid="7610" productcode="1000380600" amount="6" pickerdistance="0" packageindexlist="49,50,51,52,53,54" />
+                    <instruction index="39" typecode="MoveC" destinationcode="CS-A06.01.022" distance="920" />
+                    <instruction index="40" typecode="ParkC" destinationcode="CS-A06.01.022" distance="0" />
+                    <instruction index="41" typecode="PickP" locationcode="311.033.01" orderlineid="7613" productcode="1002070402" amount="6" pickerdistance="0" packageindexlist="57,58,59,60,62,63" />
+                    <instruction index="42" typecode="MoveC" destinationcode="CS-A06.01.018" distance="1840" />
+                    <instruction index="43" typecode="ParkC" destinationcode="CS-A06.01.018" distance="0" />
+                    <instruction index="44" typecode="PickP" locationcode="312.031.01" orderlineid="7612" productcode="1001210300" amount="6" pickerdistance="0" packageindexlist="56,61,64,65,66,67" />
+                    <instruction index="45" typecode="MoveC" destinationcode="JP-A06.01" distance="7820" />
+                    <instruction index="46" typecode="MoveC" destinationcode="JP-X01.06" distance="1380" />
+                    <instruction index="47" typecode="MoveC" destinationcode="JP-X01.07" distance="5750" />
+                    <instruction index="48" typecode="MoveC" destinationcode="JP-X01.08" distance="5750" />
+                    <instruction index="49" typecode="MoveC" destinationcode="JP-X01.09" distance="5750" />
+                    <instruction index="50" typecode="MoveC" destinationcode="JP-X01.10" distance="5750" />
+                    <instruction index="51" typecode="MoveC" destinationcode="JP-X01.11" distance="5750" />
+                    <instruction index="52" typecode="MoveC" destinationcode="JP-X01.12" distance="5750" />
+                </instructionlist>
+            </containerrecipe>
+        </containerrecipelist>
+    </recipe>
+</envelope>
